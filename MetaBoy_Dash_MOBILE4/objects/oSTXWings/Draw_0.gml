@@ -1,0 +1,24 @@
+/// @description Insert description here
+// You can write your code in this editor
+
+draw_self();
+
+if(global.GhostActive == 1)
+{image_alpha = .4;}
+else{image_alpha = 1;}
+
+if(instance_exists(oPlayerSTX))
+{
+if (oPlayerSTX.flash > 0)
+{
+		if (frac(oPlayerSTX.flash/4) != 0)
+		{
+			shader_set(shWhite);
+			draw_self();
+			shader_reset();
+		}
+}
+}
+
+
+
